@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <section class="navigation"></section>
+    <div class="filter-container">
+      <label for="sortCatergory" class="form-label">Sort By Catergory</label>
+      <select
+        name="sortCatergory"
+        id="sortCatergory"
+        onchange="sortCatergory()"
+      >
+        <option value="All">All</option>
+        <option value="Sedan">Sedan</option>
+        <option value="Coupe">Coupe</option>
+        <option value="Sports">Sports</option>
+        <option value="Hatchback">Hatchback</option>
+        <option value="Super">Super</option>
+        <option value="Convertible">Convertible</option>
+      </select>
+      <label for="sortPrice" class="form-label">Sort By Price</label>
+      <select name="sortPrice" id="sortPrice" onchange="sortPrice()">
+        <option value=""></option>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+      <label for="sortName" class="form-label">Sort By Name</label>
+      <select name="sortName" id="sortName" onchange="sortName()">
+        <option value=""></option>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+    </div>
+    <div class="card-container"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
