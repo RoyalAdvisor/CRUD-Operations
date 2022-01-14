@@ -16,7 +16,7 @@ let car = JSON.parse(localStorage.getItem("car"))
         img: "https://www.carscoops.com/wp-content/uploads/2020/07/Honda-Civic-Type-R-7.jpg",
       },
       {
-        name: "opel Astra OPC",
+        name: "Opel Astra OPC",
         type: "Hatchback",
         price: 600000,
         img: "https://cdn.motor1.com/images/mgl/AgOXL/s1/2014-453073-opel-astra-opc-extreme1.jpg",
