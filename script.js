@@ -279,7 +279,7 @@ readCart = (cart) => {
   cart.forEach((item, index) => {
     document.querySelector("#cart-item").innerHTML += `
     <div class="cart-container">
-      <div class="cart-card mb-3 shadow-sm" style="max-width: 600px;">
+      <div class="cart-card mb-3 shadow-sm">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="${item.img}" class="cart-img rounded-start" alt="...">
