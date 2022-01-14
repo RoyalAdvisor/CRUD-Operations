@@ -291,7 +291,7 @@ readCart = (cart) => {
               <p class="card-text">Price(R): ${item.price}</p>
               <input type="number" min=1 value=${
                 item.quantity
-              } onchange="updateCart(${index})" class="update-quantity${index}">
+              } onchange="updateCart(${index})" class="update-quantity${index}" id="update">
               <p class="card-price">Price(R): ${
                 parseInt(item.quantity) * parseInt(item.price)
               }</p>
