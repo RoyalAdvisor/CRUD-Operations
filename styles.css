@@ -249,6 +249,7 @@ nav a:hover {
   gap: 0.5rem;
   padding: 20px;
   overflow-y: scroll;
+  z-index: 100;
 }
 .cart-img {
   width: 100%;
