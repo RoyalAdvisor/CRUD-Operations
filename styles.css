@@ -293,9 +293,14 @@ nav a:hover {
   .filter-container select {
     width: 50%;
   }
+  .cart-card{
+    width:100%;
+    height: fit-content;
+  }
+  #update{
+    width: 100%;
+  } 
 }
 
-#update{
-width: 50px;
-}
+
 
