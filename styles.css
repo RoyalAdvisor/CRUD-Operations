@@ -219,7 +219,7 @@ nav a:hover {
 
 .card-item {
   width: 100%;
-  height: fit-content;
+  height: max-content;
 }
 .quantity {
   margin-top: 1.5rem;
