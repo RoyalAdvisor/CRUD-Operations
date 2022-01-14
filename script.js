@@ -76,7 +76,7 @@ readCar = (car) => {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Name: ${item.name}</h5>
+                <h5 class="card-title">${item.name}</h5>
                 <p class="card-text">Type: ${item.type}</p>
                 <p class="card-text">Price(R): ${item.price}</p>
                 <div class="quantity">
@@ -286,7 +286,7 @@ readCart = (cart) => {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Name: ${item.name}</h5>
+              <h5 class="card-title">${item.name}</h5>
               <p class="card-text">Type: ${item.type}</p>
               <p class="card-text">Price(R): ${item.price}</p>
               <input type="number" min=1 value=${
