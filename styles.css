@@ -104,7 +104,7 @@ nav a:hover {
   right: 0;
 
   background-color: #fff;
-  width: 35%;
+  width: 50%;
   height: 100vh;
   z-index: 99;
   transition: 0.4s ease-in-out;
@@ -299,14 +299,14 @@ nav a:hover {
     width: 20%;
     float: right;
   }
-  .cart-card{
-    width:100%;
+  .cart-card {
+    width: 100%;
     height: fit-content;
   }
-  #update{
+  #update {
     width: 100%;
     margin-bottom: 1rem;
-  } 
+  }
   .total {
     position: fixed;
     bottom: 0;
@@ -317,11 +317,5 @@ nav a:hover {
   }
   .total h5 {
     margin-left: 2.5rem;
-  } 
+  }
 }
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 92147dcbbecd59e92b49d626ae1353d553091a16

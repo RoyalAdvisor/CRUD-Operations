@@ -130,7 +130,7 @@ navigation = () => {
   document.querySelector(".navigation").innerHTML = `
     <div class="nav-container">
         <nav class="nav">
-          <a href="#home">Home</a>
+          <a href="#index">Motion Autos</a>
         </nav>
         <button type="button" class="btn btn-info btn1" id="m-cart" data-bs-toggle="offcanvas" data-bs-target="#cart-item" aria-controls="cart-item">Cart</button>
         <button class="btn btn-warning  btn2" id="m-cart" data-bs-toggle="modal" data-bs-target="#add-modal">Add Car</button>
@@ -142,7 +142,7 @@ navigation = () => {
       </div>
       <div class="mobile-nav">
         <nav class="m-nav">
-          <a href="#home">Home</a>
+          <a href="#home">Motion Autos</a>
           <button type="button" class="btn btn-info " id="m-cart" data-bs-toggle="offcanvas" data-bs-target="#cart-item" aria-controls="cart-item">View Cart</button>
         </nav>        
         <button class="btn btn-warning btn3 " id="m-cart" data-bs-toggle="modal" data-bs-target="#add-modal">Add Car</button>
@@ -209,30 +209,42 @@ createCar = () => {
   let addPrice = document.querySelector(`#add-price`).value;
   let addType = document.querySelector(`.add-type`).value;
   let addImage = document.querySelector(`#add-image`).value;
-
-  car.push({
-    name: addName,
-    price: addPrice,
-    type: addType,
-    img: addImage,
-  });
-  localStorage.setItem("car", JSON.stringify(car));
-  readCar(car);
+  try {
+    if (!addName || !addPrice || !addType || !addImage) {
+      throw new Error("Please fill in all fields before saving changes!");
+    }
+    car.push({
+      name: addName,
+      price: addPrice,
+      type: addType,
+      img: addImage,
+    });
+    localStorage.setItem("car", JSON.stringify(car));
+    readCar(car);
+  } catch (error) {
+    alert(error);
+  }
 };
 editCar = (index) => {
   let name = document.querySelector(`#edit-name-${index}`).value;
   let price = document.querySelector(`#edit-price-${index}`).value;
   let type = document.querySelector(`.edit-type-${index}`).value;
   let image = document.querySelector(`#edit-image-${index}`).value;
-
-  car[index] = {
-    name,
-    price,
-    type,
-    img: image,
-  };
-  localStorage.setItem("car", JSON.stringify(car));
-  readCar(car);
+  try {
+    if (!name || !price || !type || !image) {
+      throw new Error("Please fill in all fields before saving changes!");
+    }
+    car[index] = {
+      name,
+      price,
+      type,
+      img: image,
+    };
+    localStorage.setItem("car", JSON.stringify(car));
+    readCar(car);
+  } catch (error) {
+    alert(error);
+  }
 };
 
 // SHOPPING CART
@@ -322,8 +334,8 @@ deleteCart = (index) => {
 
 //CATERGORY SORT
 
-sortCatergory = () => {
-  let type = document.querySelector("#sortCatergory").value;
+sortType = () => {
+  let type = document.querySelector("#sortType").value;
 
   if (type == "All") {
     readCar(car);
