@@ -219,7 +219,7 @@ nav a:hover {
 
 .card-item {
   width: 100%;
-  height: fit-content;
+  height: max-content;
 }
 .quantity {
   margin-top: 1.5rem;
@@ -299,4 +299,29 @@ nav a:hover {
     width: 20%;
     float: right;
   }
+  .cart-card{
+    width:100%;
+    height: fit-content;
+  }
+  #update{
+    width: 100%;
+    margin-bottom: 1rem;
+  } 
+  .total {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: #fff;
+  }
+  .total h5 {
+    margin-left: 2.5rem;
+  } 
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 92147dcbbecd59e92b49d626ae1353d553091a16

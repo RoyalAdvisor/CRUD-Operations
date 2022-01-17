@@ -76,7 +76,7 @@ readCar = (car) => {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Name: ${item.name}</h5>
+                <h5 class="card-title">${item.name}</h5>
                 <p class="card-text">Type: ${item.type}</p>
                 <p class="card-text">Price(R): ${item.price}</p>
                 <div class="quantity">
@@ -279,19 +279,19 @@ readCart = (cart) => {
   cart.forEach((item, index) => {
     document.querySelector("#cart-item").innerHTML += `
     <div class="cart-container">
-      <div class="cart-card mb-3 shadow-sm" style="max-width: 600px;">
+      <div class="cart-card mb-3 shadow-sm">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="${item.img}" class="cart-img rounded-start" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Name: ${item.name}</h5>
+              <h5 class="card-title">${item.name}</h5>
               <p class="card-text">Type: ${item.type}</p>
               <p class="card-text">Price(R): ${item.price}</p>
               <input type="number" min=1 value=${
                 item.quantity
-              } onchange="updateCart(${index})" class="update-quantity${index}">
+              } onchange="updateCart(${index})" class="update-quantity${index}" id="update">
               <p class="card-price">Price(R): ${
                 parseInt(item.quantity) * parseInt(item.price)
               }</p>
