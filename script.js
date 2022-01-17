@@ -264,6 +264,7 @@ addToCart = (index) => {
     console.log(cart);
     localStorage.setItem("cart", JSON.stringify(cart));
   }
+  // addCheckout(cart);
   readCart(cart);
 };
 
@@ -285,7 +286,30 @@ readCart = (cart) => {
   </div>
   <div class="total">
     <h5 class="total-price">Total Price(R): ${calculateTotal()}</h5>
+    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#checkout" onclick="addCheckout()">Checkout</button>
   </div>
+
+  <div class="modal fade" id="checkout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="checkout-body">
+        </div>
+        <div class="checkout-modal-footer">
+          <div class="total-heading">
+            <h5 class="total-price">Total Price(R): ${calculateTotal()}</h5>
+          </div>
+          <div class="footer-buttons">
+            <button type="button" class="btn btn-danger" id="f-btn" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-info" id="f-btn" data-bs-dismiss="modal" onclick="clearCheckout()">Purchase</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
   `;
 
   cart.forEach((item, index) => {
@@ -372,4 +396,39 @@ sortName = () => {
   });
   if (direction == "descending") sortedName.reverse();
   readCar(car);
+};
+
+// CHECKOUT
+
+addCheckout = () => {
+  try {
+    if (cart.length === 0) {
+      throw new Error("Shopping cart is empty");
+    }
+    document.querySelector(".checkout-body").innerHTML = "";
+    cart.forEach((item) => {
+      document.querySelector(".checkout-body").innerHTML += `
+     <div class="item-body">
+        <div class="item-img">
+          <img src="${item.img}" class="checkout-img">
+        </div>
+        <div class="item-info">
+          <h5 class="card-title">${item.name}</h5>
+          <p class="card-price">Price(R): ${
+            parseInt(item.quantity) * parseInt(item.price)
+          }</p>
+        </div>
+     </div>
+    `;
+    });
+  } catch (error) {
+    alert(error);
+  }
+};
+
+clearCheckout = () => {
+  cart.length = 0;
+  localStorage.removeItem("cart");
+  readCart(cart);
+  alert("Thank you for your purchase!");
 };
