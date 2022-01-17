@@ -16,32 +16,38 @@
   <body>
     <section class="navigation"></section>
     <div class="filter-container">
-      <label for="sortCatergory" class="form-label">Sort By Catergory</label>
-      <select
-        name="sortCatergory"
-        id="sortCatergory"
-        onchange="sortCatergory()"
-      >
-        <option value="All">All</option>
-        <option value="Sedan">Sedan</option>
-        <option value="Coupe">Coupe</option>
-        <option value="Sports">Sports</option>
-        <option value="Hatchback">Hatchback</option>
-        <option value="Super">Super</option>
-        <option value="Convertible">Convertible</option>
-      </select>
-      <label for="sortPrice" class="form-label">Sort By Price</label>
-      <select name="sortPrice" id="sortPrice" onchange="sortPrice()">
-        <option value=""></option>
-        <option value="ascending">Ascending</option>
-        <option value="descending">Descending</option>
-      </select>
-      <label for="sortName" class="form-label">Sort By Name</label>
-      <select name="sortName" id="sortName" onchange="sortName()">
-        <option value=""></option>
-        <option value="ascending">Ascending</option>
-        <option value="descending">Descending</option>
-      </select>
+      <div class="filter-item">
+        <label for="sortCatergory" class="form-label">Sort By Catergory</label>
+        <select
+          name="sortCatergory"
+          id="sortCatergory"
+          onchange="sortCatergory()"
+        >
+          <option value="All">All</option>
+          <option value="Sedan">Sedan</option>
+          <option value="Coupe">Coupe</option>
+          <option value="Sports">Sports</option>
+          <option value="Hatchback">Hatchback</option>
+          <option value="Super">Super</option>
+          <option value="Convertible">Convertible</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="sortPrice" class="form-label">Sort By Price</label>
+        <select name="sortPrice" id="sortPrice" onchange="sortPrice()">
+          <option value=""></option>
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="sortName" class="form-label">Sort By Name</label>
+        <select name="sortName" id="sortName" onchange="sortName()">
+          <option value=""></option>
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
+      </div>
     </div>
     <div class="card-container"></div>
     <script

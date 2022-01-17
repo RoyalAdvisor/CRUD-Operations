@@ -277,23 +277,26 @@ nav a:hover {
   margin: 1rem;
   margin-top: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   row-gap: 0.1rem;
-}
-
-.filter-container select {
-  width: 20%;
+  column-gap: 1rem;
 }
 
 @media only screen and (max-width: 450px) {
   .filter-container {
     margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-  .filter-container select {
-    width: 50%;
+  .filter-item {
+    width: 100%;
+  }
+  .filter-item select {
+    width: 20%;
+    float: right;
   }
 }
-
-.update-quantity {
-  width: 50%
