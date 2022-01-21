@@ -144,8 +144,8 @@ navigation = () => {
         <nav class="m-nav">
           <a href="#home">Motion Autos</a>
           <button type="button" class="btn btn-info " id="m-cart" data-bs-toggle="offcanvas" data-bs-target="#cart-item" aria-controls="cart-item">View Cart</button>
+          <button class="btn btn-warning btn3 " id="m-cart" data-bs-toggle="modal" data-bs-target="#add-modal">Add Car</button>
         </nav>        
-        <button class="btn btn-warning btn3 " id="m-cart" data-bs-toggle="modal" data-bs-target="#add-modal">Add Car</button>
     </div>
 
     <div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
